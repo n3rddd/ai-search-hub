@@ -108,15 +108,60 @@ Grok 擅长 X / Twitter 实时搜索。
 
 ## Provider 一览
 
-| Provider | 优势方向 | 典型覆盖 | 当前角色 |
-|---|---|---|---|
-| Gemini | Google / 网页搜索 | Google、公开网页、知识内容 | 核心 |
-| Grok | X / Twitter 实时搜索 | 热点讨论、实时动态、社交舆情 | 核心 |
-| 豆包 | 中文内容理解 | 抖音、中文内容生态、热门话题 | 核心 |
-| 元宝 | 中文生态补充 | 微信公众号、中文网页内容 | 核心 |
-| 文心一言 | 中文搜索扩展 | 中文搜索、公开网页 | 扩展 |
-| 通义千问 | 中文搜索扩展 | 中文搜索、公开网页 | 扩展 |
-| 更多平台 | 持续扩展 | 更多社交媒体 / 搜索入口 | Future |
+<table>
+  <thead>
+    <tr>
+      <th align="left">Provider</th>
+      <th align="left">擅长方向</th>
+      <th align="left">典型覆盖</th>
+      <th align="left">当前角色</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Gemini</strong><br><sub>Google-first discovery</sub></td>
+      <td><code>Google 搜索</code> <code>网页发现</code> <code>知识内容</code></td>
+      <td><code>Google</code> <code>公开网页</code> <code>知识站点</code></td>
+      <td><img src="https://img.shields.io/badge/Core-16a34a?style=flat-square" alt="Core"></td>
+    </tr>
+    <tr>
+      <td><strong>Grok</strong><br><sub>Real-time social search</sub></td>
+      <td><code>X / Twitter</code> <code>实时动态</code> <code>热点讨论</code></td>
+      <td><code>实时舆情</code> <code>趋势话题</code> <code>社交信号</code></td>
+      <td><img src="https://img.shields.io/badge/Core-16a34a?style=flat-square" alt="Core"></td>
+    </tr>
+    <tr>
+      <td><strong>豆包</strong><br><sub>Chinese trend sensing</sub></td>
+      <td><code>中文理解</code> <code>热点话题</code> <code>内容归纳</code></td>
+      <td><code>抖音</code> <code>中文内容生态</code> <code>热门内容</code></td>
+      <td><img src="https://img.shields.io/badge/Core-16a34a?style=flat-square" alt="Core"></td>
+    </tr>
+    <tr>
+      <td><strong>元宝</strong><br><sub>Chinese source supplement</sub></td>
+      <td><code>中文补充检索</code> <code>公众号信源</code> <code>内容交叉验证</code></td>
+      <td><code>微信公众号</code> <code>中文网页</code> <code>公开内容</code></td>
+      <td><img src="https://img.shields.io/badge/Core-16a34a?style=flat-square" alt="Core"></td>
+    </tr>
+    <tr>
+      <td><strong>文心一言</strong><br><sub>Chinese web expansion</sub></td>
+      <td><code>中文搜索</code> <code>公开网页</code> <code>百度生态</code></td>
+      <td><code>中文网页</code> <code>搜索结果</code> <code>公开站点</code></td>
+      <td><img src="https://img.shields.io/badge/Extended-2563eb?style=flat-square" alt="Extended"></td>
+    </tr>
+    <tr>
+      <td><strong>通义千问</strong><br><sub>Chinese web expansion</sub></td>
+      <td><code>中文搜索</code> <code>网页问答</code> <code>公开内容</code></td>
+      <td><code>中文网页</code> <code>搜索入口</code> <code>公开信息</code></td>
+      <td><img src="https://img.shields.io/badge/Extended-2563eb?style=flat-square" alt="Extended"></td>
+    </tr>
+    <tr>
+      <td><strong>More</strong><br><sub>Extensible surface</sub></td>
+      <td><code>持续扩展</code> <code>更多入口</code> <code>更多平台</code></td>
+      <td><code>社交媒体</code> <code>搜索平台</code> <code>垂直内容源</code></td>
+      <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

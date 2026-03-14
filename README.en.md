@@ -109,15 +109,60 @@ The final output is meant for agents, research pipelines, monitoring systems, an
 
 ## Provider Matrix
 
-| Provider | Search Strength | Typical Coverage | Role |
-|---|---|---|---|
-| Gemini | Google / web search | Google, public web, knowledge content | Core |
-| Grok | X / Twitter real-time search | Live discussion, trending topics, real-time signals | Core |
-| Doubao | Chinese content understanding | Douyin, Chinese content ecosystem, hot topics | Core |
-| Yuanbao | Chinese source supplement | WeChat Official Accounts, Chinese web content | Core |
-| Wenxin Yiyan | Chinese web expansion | Chinese search, public web pages | Extended |
-| Qwen / Tongyi | Chinese web expansion | Chinese search, public web pages | Extended |
-| More | Extensible | More social/search surfaces | Future |
+<table>
+  <thead>
+    <tr>
+      <th align="left">Provider</th>
+      <th align="left">Search Strength</th>
+      <th align="left">Typical Coverage</th>
+      <th align="left">Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Gemini</strong><br><sub>Google-first discovery</sub></td>
+      <td><code>Google search</code> <code>web discovery</code> <code>knowledge lookup</code></td>
+      <td><code>Google</code> <code>public web</code> <code>knowledge sites</code></td>
+      <td><img src="https://img.shields.io/badge/Core-16a34a?style=flat-square" alt="Core"></td>
+    </tr>
+    <tr>
+      <td><strong>Grok</strong><br><sub>Real-time social search</sub></td>
+      <td><code>X / Twitter</code> <code>live signals</code> <code>trend discovery</code></td>
+      <td><code>real-time posts</code> <code>social chatter</code> <code>trending topics</code></td>
+      <td><img src="https://img.shields.io/badge/Core-16a34a?style=flat-square" alt="Core"></td>
+    </tr>
+    <tr>
+      <td><strong>Doubao</strong><br><sub>Chinese trend sensing</sub></td>
+      <td><code>Chinese understanding</code> <code>hot topics</code> <code>content summarization</code></td>
+      <td><code>Douyin</code> <code>Chinese content</code> <code>trending discussions</code></td>
+      <td><img src="https://img.shields.io/badge/Core-16a34a?style=flat-square" alt="Core"></td>
+    </tr>
+    <tr>
+      <td><strong>Yuanbao</strong><br><sub>Chinese source supplement</sub></td>
+      <td><code>Chinese supplement</code> <code>official account lookup</code> <code>source cross-checking</code></td>
+      <td><code>WeChat Official Accounts</code> <code>Chinese web</code> <code>public content</code></td>
+      <td><img src="https://img.shields.io/badge/Core-16a34a?style=flat-square" alt="Core"></td>
+    </tr>
+    <tr>
+      <td><strong>Wenxin Yiyan</strong><br><sub>Chinese web expansion</sub></td>
+      <td><code>Chinese search</code> <code>public web</code> <code>Baidu ecosystem</code></td>
+      <td><code>Chinese pages</code> <code>search results</code> <code>public sites</code></td>
+      <td><img src="https://img.shields.io/badge/Extended-2563eb?style=flat-square" alt="Extended"></td>
+    </tr>
+    <tr>
+      <td><strong>Qwen / Tongyi</strong><br><sub>Chinese web expansion</sub></td>
+      <td><code>Chinese search</code> <code>web Q&amp;A</code> <code>public content</code></td>
+      <td><code>Chinese web</code> <code>search surfaces</code> <code>open information</code></td>
+      <td><img src="https://img.shields.io/badge/Extended-2563eb?style=flat-square" alt="Extended"></td>
+    </tr>
+    <tr>
+      <td><strong>More</strong><br><sub>Extensible surface</sub></td>
+      <td><code>continuous expansion</code> <code>new surfaces</code> <code>new providers</code></td>
+      <td><code>social media</code> <code>search platforms</code> <code>vertical sources</code></td>
+      <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
