@@ -1,21 +1,20 @@
+# AI Search Hub
+
 <div align="center">
 
 # AI Search Hub
 
-### 一次查询，同时搜索多个平台。
+### 一次提问，全域搜索。
 
 [English](README.en.md)
 
-[![GitHub stars](https://img.shields.io/github/stars/minsight-ai-info/AI-Search-Hub?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/minsight-ai-info/AI-Search-Hub?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/minsight-ai-info/AI-Search-Hub?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub/issues)
-[![GitHub repo](https://img.shields.io/badge/repo-GitHub-181717?style=flat-square&logo=github)](https://github.com/minsight-ai-info/AI-Search-Hub)
-[![Skill](https://img.shields.io/badge/type-open--source%20skill-black?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub)
+[![Repo](https://img.shields.io/badge/Repo-GitHub-181717?style=flat-square&logo=github)](https://github.com/minsight-ai-info/AI-Search-Hub)
+[![Type](https://img.shields.io/badge/type-open--source%20skill-black?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub)
+[![Status](https://img.shields.io/badge/status-active-success?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub)
+[![Mode](https://img.shields.io/badge/mode-browser--driven-blue?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub)
 
-**AI Search Hub** 是一个开源 Skill，用来把原本分散在不同 AI 平台聊天框里的搜索能力，统一成一个可复用的搜索中枢。
-
-你不需要自己维护脆弱的爬虫，不需要反复调试浏览器自动化，不需要辛苦绕反爬，也不需要一遍遍试关键词。
-**AI Search Hub 直接复用各大厂商已经优化好的搜索能力。**
+**一个聚合多平台 AI 原生搜索能力的开源 Skill。**
+**一次提问，并行调用多个 AI 平台的搜索入口。**
 
 </div>
 
@@ -23,126 +22,102 @@
 
 ## AI Search Hub 是什么？
 
-- Gemini 更擅长 **Google / 网页搜索**
-- Grok 更擅长 **X / Twitter 搜索**
-- 豆包 更擅长 **抖音和中文内容生态**
-- 元宝 可以补充 **微信公众号和中文网页内容**
-- 文心一言、通义千问 还能继续扩展中文互联网覆盖
+AI Search Hub 是一个开源 Skill，用来把分散在不同 AI 平台里的搜索能力，整理成一个可复用的搜索中枢。
 
-AI Search Hub 不是重新发明一个搜索引擎，
-而是直接接住这些平台已经打磨好的搜索能力。
+它不想让你继续维护：
 
-你不需要再：
+- 一堆脆弱爬虫
+- 每个平台各自一套浏览器自动化
+- 反复登录、验证码、限流、风控处理
+- 无休止的关键词试错和提示词微调
+- 最后还要人工收拾碎片结果
 
-- 自己维护一堆脆弱爬虫
-- 为每个平台单独调试浏览器自动化
-- 反复处理反爬、限流、封禁、验证码
-- 为不同平台一遍遍调关键词
-- 手动整理一堆碎片化搜索结果
+它想做的事情很直接：
 
-你只需要发起 **一次查询**，
-AI Search Hub 就可以帮你 **并行搜索多个平台**。
+> **把各大平台已经优化好的原生搜索入口统一接进来，让 Agent、工作流和自动化系统可以直接复用。**
 
 ---
 
-## 为什么做这个项目？
+## 为什么值得做？
 
-很多所谓“全网搜索”方案，最后都会变成一套非常重的工程系统：
+很多“全网搜索”项目最后都会越来越重：
 
-- 写爬虫
-- 跑浏览器
-- 处理登录态
-- 处理验证码和风控
-- 一个个平台单独适配
-- 关键词不断重调
-- 结果还要手工整理
+- 要写爬虫
+- 要跑浏览器
+- 要扛平台变更
+- 要处理登录态和风控
+- 要维护每个平台的独立适配
+- 要自己清洗和整合结果
 
 AI Search Hub 选择另一条路：
 
-> **直接复用平台已经优化好的搜索能力。**
+> **不重造搜索系统，直接复用平台已经打磨好的搜索能力。**
 
-平台已经把搜索质量、排序逻辑、数据接入和交互体验做得很强了。
-AI Search Hub 做的事，就是把这些能力统一起来，变成一个 Agent 可直接调用的 Skill。
-
----
-
-## 核心价值
-
-- **一次查询，同时搜索多个平台**
-- **多 Provider 并行搜索**
-- **直接复用平台原生搜索能力**
-- **无需维护爬虫**
-- **无需辛苦绕反爬**
-- **无需调试浏览器搜索流程**
-- **无需反复调关键词**
-- **开箱即用，适合 Agent**
-- **方便继续扩展更多 Provider**
+平台已经把搜索质量、排序逻辑、入口接入和交互体验打磨得很强。
+AI Search Hub 不重复造轮子，它负责把这些能力编排起来。
 
 ---
 
-## 架构说明
+## 为什么它更省事？
 
-AI Search Hub 不是一个重型搜索引擎，
-也不是一个大型爬虫框架。
-
-它本质上是一个轻量级的 **搜索能力聚合层**。
-
-```text
-用户 / Agent
-    -> 一次查询
-    -> AI Search Hub
-        -> Gemini
-        -> Grok
-        -> 豆包
-        -> 元宝
-        -> 文心一言
-        -> 通义千问
-    -> 多平台搜索结果
-    -> 统一输出
-```
-
-### 工作方式
-
-1. **接收一次查询**
-   用户或 Agent 只需要输入一次问题。
-
-2. **并行分发到多个平台**
-   AI Search Hub 会把同一个问题同时发送到多个平台。
-
-3. **让各平台搜索自己最擅长的数据世界**
-   不同平台去搜索它们最有优势的内容生态。
-
-4. **统一聚合结果**
-   多个平台的返回内容会被整理成标准输出。
-
-5. **返回给你的工作流或 Agent 使用**
-   可直接接到 Agent、自动化流程、研究系统、监控系统中。
-
----
-
-## 支持 / 目标接入的平台
-
-| 平台 | 擅长方向 |
+| 传统方案 | AI Search Hub |
 |---|---|
-| Gemini | Google / 网页搜索 |
-| Grok | X / Twitter 搜索 |
-| 豆包 | 抖音 / 中文内容生态 |
-| 元宝 | 微信公众号 / 中文内容补充 |
-| 文心一言 | 中文互联网搜索扩展 |
-| 通义千问 | 中文互联网搜索扩展 |
-| 更多平台 | 持续扩展 |
+| 自己写爬虫 | 直接复用平台原生搜索 |
+| 一个平台一套自动化 | 一次提问，多平台分发 |
+| 反复处理风控与验证码 | 尽量沿用平台已有入口 |
+| 自己调关键词和检索策略 | 借助平台已优化好的搜索逻辑 |
+| 结果分散、要手工拼接 | 统一输出给 Agent / Workflow |
 
 ---
 
-## 搜索覆盖面
+## 工作方式
 
-通过聚合不同平台已经优化好的原生搜索能力，
-AI Search Hub 可以间接覆盖多种主流信息来源，例如：
+### 1. 接收一次提问
+
+用户或 Agent 只输入一次问题，不需要为每个平台重复组织查询。
+
+### 2. 分发到多个平台
+
+同一个问题会被发送到多个 Provider，让它们各自去搜索自己最擅长的数据世界。
+
+### 3. 复用平台原生能力
+
+Gemini 擅长 Google / 网页搜索。
+Grok 擅长 X / Twitter 实时搜索。
+豆包、元宝、通义千问、文心一言更适合不同层次的中文互联网内容。
+
+### 4. 收集并整理结果
+
+多平台返回的内容会被拉回同一个出口，后续可以统一做标准化、融合和工作流消费。
+
+### 5. 返回给 Agent 或系统
+
+最终结果不是停留在浏览器页面，而是成为 Agent、研究系统、监控流程或自动化链路里的可复用输入。
+
+---
+
+## Provider 一览
+
+| Provider | 优势方向 | 典型覆盖 | 当前角色 |
+|---|---|---|---|
+| Gemini | Google / 网页搜索 | Google、公开网页、知识内容 | 核心 |
+| Grok | X / Twitter 实时搜索 | 热点讨论、实时动态、社交舆情 | 核心 |
+| 豆包 | 中文内容理解 | 抖音、中文内容生态、热门话题 | 核心 |
+| 元宝 | 中文生态补充 | 微信公众号、中文网页内容 | 核心 |
+| 文心一言 | 中文搜索扩展 | 中文搜索、公开网页 | 扩展 |
+| 通义千问 | 中文搜索扩展 | 中文搜索、公开网页 | 扩展 |
+| 更多平台 | 持续扩展 | 更多社交媒体 / 搜索入口 | Future |
+
+---
+
+## 能覆盖哪些信息源？
+
+通过不同平台已经打磨好的搜索能力，AI Search Hub 可以间接覆盖多种主流来源，例如：
 
 - Google
 - 微博
 - 抖音
-- Twitter / X
+- X / Twitter
 - Reddit
 - 微信公众号
 - 各类公开网页内容
@@ -156,9 +131,7 @@ AI Search Hub 可以间接覆盖多种主流信息来源，例如：
 
 ---
 
-## 配置应该怎么写？
-
-如果你现在 README 里只是想放一个 **配置示例**，建议写成下面这种形式：
+## 配置示例
 
 ```yaml
 hub:
@@ -192,14 +165,12 @@ providers:
     role: "general-chinese-search"
 ```
 
-这个配置不代表项目里现在一定已经有这样一个 YAML 文件，
-它更像是一个概念示例，用来告诉用户：
+这个配置不代表项目里现在一定已经有这样一个 YAML 文件。
+它只是一个概念示例，用来表达：
 
-- Hub 层负责并行调度
-- Provider 层负责启用哪些平台
-- 每个平台有自己擅长的搜索角色
-
-如果后面真实实现用的是 JSON、Python dict 或 env，也可以再调整。
+- Hub 层负责统一调度
+- Provider 层负责接入不同平台
+- 不同平台承担不同搜索角色
 
 ---
 
@@ -253,32 +224,25 @@ providers:
 相比传统搜索流程会少很多，因为它尽量复用平台已经优化好的搜索能力。
 
 **为什么这对 Agent 很重要？**
-因为 Agent 需要的是可调用的搜索能力，而不是一堆脆弱的浏览器脚本。
+因为 Agent 需要的是可调用的搜索能力，而不是一堆脆弱脚本。
 
 **能不能继续加新的平台？**
 可以。这个设计本来就是轻量、可扩展的。
 
 ---
 
-## Repository
-
-- GitHub: https://github.com/minsight-ai-info/AI-Search-Hub
-
----
-
 ## Roadmap
 
-- [ ] Multi-provider search aggregation
-- [ ] One-query parallel dispatch
-- [ ] Unified result output
-- [x] Browser-based provider runners
-- [x] Login recovery flow
-- [x] Isolated browser-profile seeding
-- [ ] More provider integrations
-- [ ] Better routing strategies
-- [ ] Result ranking / fusion
-- [ ] Evidence / source view
-- [ ] Plug-and-play templates for agent frameworks
+| 阶段 | 内容 | 状态 |
+|---|---|---|
+| Phase 1 | Browser-based provider runners | Done |
+| Phase 2 | Login recovery flow | Done |
+| Phase 3 | Isolated browser-profile seeding | Done |
+| Phase 4 | Multi-provider search aggregation | In Progress |
+| Phase 5 | Unified result output | In Progress |
+| Phase 6 | More provider integrations | Planned |
+| Phase 7 | Result ranking / fusion | Planned |
+| Phase 8 | Evidence / source view | Planned |
 
 ---
 
@@ -302,6 +266,6 @@ AI Search Hub 的目标是以务实、可持续的方式复用平台原生能力
 
 ## Final Line
 
-**One Query. All Search.**
+**一次提问，全域搜索。**
 不用从零重建搜索。
 直接接入平台已经打磨好的搜索能力。

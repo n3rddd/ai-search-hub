@@ -1,3 +1,5 @@
+# AI Search Hub
+
 <div align="center">
 
 # AI Search Hub
@@ -6,16 +8,13 @@
 
 [中文](README.md)
 
-[![GitHub stars](https://img.shields.io/github/stars/minsight-ai-info/AI-Search-Hub?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/minsight-ai-info/AI-Search-Hub?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub/network/members)
-[![GitHub issues](https://img.shields.io/github/issues/minsight-ai-info/AI-Search-Hub?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub/issues)
-[![GitHub repo](https://img.shields.io/badge/repo-GitHub-181717?style=flat-square&logo=github)](https://github.com/minsight-ai-info/AI-Search-Hub)
-[![Skill](https://img.shields.io/badge/type-open--source%20skill-black?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub)
+[![Repo](https://img.shields.io/badge/Repo-GitHub-181717?style=flat-square&logo=github)](https://github.com/minsight-ai-info/AI-Search-Hub)
+[![Type](https://img.shields.io/badge/type-open--source%20skill-black?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub)
+[![Status](https://img.shields.io/badge/status-active-success?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub)
+[![Mode](https://img.shields.io/badge/mode-browser--driven-blue?style=flat-square)](https://github.com/minsight-ai-info/AI-Search-Hub)
 
-**AI Search Hub** is an open-source skill that aggregates **platform-native AI search** into one unified interface.
-
-Instead of building fragile crawlers, debugging browser automation, fighting anti-scraping systems, or endlessly tuning keywords,
-AI Search Hub lets your agent directly reuse the search capabilities that major AI platforms have already optimized.
+**An open-source skill for aggregating platform-native AI search.**
+**Send one query, search multiple AI platforms in parallel.**
 
 </div>
 
@@ -23,126 +22,103 @@ AI Search Hub lets your agent directly reuse the search capabilities that major 
 
 ## What is AI Search Hub?
 
-**AI Search Hub** is an open-source skill that turns fragmented AI search surfaces into one unified search hub.
+AI Search Hub is an open-source skill that turns fragmented AI search surfaces into one reusable search hub.
 
-Gemini is strong at **Google / web search**.
-Grok is strong at **X / Twitter search**.
-Doubao is strong at **Douyin and Chinese content ecosystems**.
-Yuanbao can help with **WeChat Official Accounts and Chinese web content**.
-Wenxin Yiyan and Qwen can further expand Chinese internet coverage.
+It is not trying to make you maintain:
 
-AI Search Hub does not try to reinvent a search engine from scratch.
-It directly reuses the search power these platforms have already refined.
+- fragile crawler stacks
+- separate browser automation flows for every provider
+- endless login, captcha, rate-limit, and anti-bot recovery
+- constant keyword and prompt tuning
+- manual cleanup of scattered results
 
-You do not need to:
+Its job is simple:
 
-- maintain fragile crawlers
-- debug browser automation for every platform
-- fight anti-scraping systems again and again
-- manually tune keywords for different providers
-- refine scattered search results by hand
-
-You just send **one query**, and AI Search Hub can search across **multiple platforms in parallel**.
+> **Aggregate the search capabilities major AI platforms have already optimized, and make them reusable for agents, workflows, and automation systems.**
 
 ---
 
-## Why AI Search Hub?
+## Why this project?
 
-Most "all-web search" solutions eventually become the same heavy engineering story:
+Most "all-web search" systems eventually become the same heavy engineering story:
 
 - custom crawlers
 - browser automation
-- login/session management
-- captchas, rate limits, bans
-- platform-specific search workflows
+- login and session handling
+- anti-bot recovery
+- provider-specific maintenance
 - endless keyword tuning
 - manual result cleanup
 
 AI Search Hub takes a different path:
 
-> **Reuse the search power platforms have already optimized.**
+> **Reuse the platform-native search power already optimized by AI vendors.**
 
-Platforms already invested in search quality, ranking, data access, and interaction design.
-AI Search Hub simply connects those capabilities together into one reusable skill.
-
----
-
-## Core Value
-
-- **One query, multiple platforms**
-- **Parallel search across providers**
-- **Reuse platform-native search**
-- **No crawler maintenance**
-- **No anti-bot headaches**
-- **No browser-search debugging**
-- **No repetitive keyword tuning**
-- **Out of the box for agents**
-- **Easy to extend with more providers**
+Platforms already invested in search quality, ranking, access, and interaction design.
+AI Search Hub does not rebuild that stack. It orchestrates it.
 
 ---
 
-## Architecture
+## Why it is lighter
 
-AI Search Hub is not a heavyweight search engine.
-It is not a giant crawler framework either.
-
-It is a lightweight **search capability aggregation layer**.
-
-```text
-User / Agent
-    -> One Query
-    -> AI Search Hub
-        -> Gemini
-        -> Grok
-        -> Doubao
-        -> Yuanbao
-        -> Wenxin
-        -> Qwen
-    -> Multi-platform Search Results
-    -> Unified Output
-```
-
-### How it works
-
-1. **Receive one query**
-   A user or agent asks one question.
-
-2. **Dispatch in parallel**
-   AI Search Hub sends the same query to multiple platforms at the same time.
-
-3. **Let each provider search where it is strongest**
-   Each platform searches its best-connected content ecosystem.
-
-4. **Aggregate results**
-   Results from multiple platforms are normalized into one output.
-
-5. **Return to your workflow**
-   The output is ready for agents, workflows, research systems, or monitoring pipelines.
-
----
-
-## Supported / Target Providers
-
-| Provider | Strength |
+| Traditional workflow | AI Search Hub |
 |---|---|
-| Gemini | Google / Web Search |
-| Grok | X / Twitter Search |
-| Doubao | Douyin / Chinese content ecosystem |
-| Yuanbao | WeChat Official Accounts / Chinese web content |
-| Wenxin Yiyan | Chinese internet search expansion |
-| Qwen / Tongyi | Chinese internet search expansion |
-| More | Easy to extend |
+| Build crawlers yourself | Reuse platform-native search |
+| One automation flow per provider | One query, multi-provider dispatch |
+| Constant anti-bot handling | Lean on existing platform entry points |
+| Endless keyword tuning | Reuse provider-optimized search logic |
+| Manual result stitching | Unified output for agents and workflows |
 
 ---
 
-## Search Coverage
+## How it works
 
-By reusing platform-native search capabilities, AI Search Hub can indirectly cover many major content sources, such as:
+### 1. Receive one query
+
+The user or agent asks one question only once. No repeated rewriting per provider.
+
+### 2. Dispatch across providers
+
+The same query is sent to multiple providers so each one can search the ecosystem it knows best.
+
+### 3. Reuse platform-native strengths
+
+Gemini is strong at Google and web search.
+Grok is strong at X / Twitter and real-time discovery.
+Doubao, Yuanbao, Qwen, and Wenxin are better aligned with different layers of the Chinese internet.
+
+### 4. Collect and normalize results
+
+Outputs from multiple providers are pulled back into a single channel, ready for normalization, fusion, and workflow consumption.
+
+### 5. Return to your workflow
+
+The final output is meant for agents, research pipelines, monitoring systems, and automation workflows, not just browser tabs.
+
+---
+
+## Provider Matrix
+
+| Provider | Search Strength | Typical Coverage | Role |
+|---|---|---|---|
+| Gemini | Google / web search | Google, public web, knowledge content | Core |
+| Grok | X / Twitter real-time search | Live discussion, trending topics, real-time signals | Core |
+| Doubao | Chinese content understanding | Douyin, Chinese content ecosystem, hot topics | Core |
+| Yuanbao | Chinese source supplement | WeChat Official Accounts, Chinese web content | Core |
+| Wenxin Yiyan | Chinese web expansion | Chinese search, public web pages | Extended |
+| Qwen / Tongyi | Chinese web expansion | Chinese search, public web pages | Extended |
+| More | Extensible | More social/search surfaces | Future |
+
+---
+
+## What sources can it cover?
+
+By reusing platform-native search capabilities, AI Search Hub can indirectly cover many major sources, such as:
 
 - Google
 - Weibo
 - Douyin
-- Twitter / X
+- X / Twitter
 - Reddit
 - WeChat Official Accounts
 - public web pages
@@ -150,13 +126,13 @@ By reusing platform-native search capabilities, AI Search Hub can indirectly cov
 - Chinese internet ecosystems
 
 The point is not to crawl every platform yourself.
-The point is to let platforms search the worlds they already know best.
+The point is:
+
+> **Let platforms search the worlds they already know best.**
 
 ---
 
-## How should configuration look?
-
-If you only want a conceptual configuration example in the README, something like this works well:
+## Example Configuration
 
 ```yaml
 hub:
@@ -190,14 +166,12 @@ providers:
     role: "general-chinese-search"
 ```
 
-This does not mean the project already ships with a YAML file in exactly this format.
-It is a conceptual example that communicates:
+This does not mean the project must already use a YAML config file.
+It is a conceptual example that shows:
 
-- the hub layer is responsible for orchestration
+- the hub layer handles orchestration
 - the provider layer controls which platforms are enabled
-- each provider has a distinct search role
-
-If the real implementation later uses JSON, Python dictionaries, or environment variables, the example can be updated.
+- each provider carries a distinct search role
 
 ---
 
@@ -244,39 +218,32 @@ If the real implementation later uses JSON, Python dictionaries, or environment 
 **Is this a crawler framework?**
 No. It is a search capability aggregation skill.
 
-**Do I need browser automation for every platform?**
-That is exactly the burden AI Search Hub tries to reduce.
+**Do I still need browser automation for every provider?**
+Reducing that burden is exactly what AI Search Hub is trying to do.
 
-**Do I still need to tune keywords for different providers?**
-Much less than traditional workflows, because AI Search Hub reuses search systems already optimized by the platforms.
+**Do I still need to tune keywords constantly?**
+Far less than traditional workflows, because AI Search Hub tries to reuse search systems already optimized by the platforms.
 
 **Why is this useful for agents?**
-Because agents need search as a capability, not a pile of brittle browser scripts.
+Because agents need search as a reusable capability, not a pile of brittle scripts.
 
 **Can I add more providers?**
 Yes. The design is intentionally lightweight and extensible.
 
 ---
 
-## Repository
-
-- GitHub: https://github.com/minsight-ai-info/AI-Search-Hub
-
----
-
 ## Roadmap
 
-- [ ] Multi-provider search aggregation
-- [ ] One-query parallel dispatch
-- [ ] Unified result output
-- [x] Browser-based provider runners
-- [x] Login recovery flow
-- [x] Isolated browser-profile seeding
-- [ ] More provider integrations
-- [ ] Better routing strategies
-- [ ] Result ranking / fusion
-- [ ] Evidence / source view
-- [ ] Plug-and-play templates for agent frameworks
+| Stage | Item | Status |
+|---|---|---|
+| Phase 1 | Browser-based provider runners | Done |
+| Phase 2 | Login recovery flow | Done |
+| Phase 3 | Isolated browser-profile seeding | Done |
+| Phase 4 | Multi-provider search aggregation | In Progress |
+| Phase 5 | Unified result output | In Progress |
+| Phase 6 | More provider integrations | Planned |
+| Phase 7 | Result ranking / fusion | Planned |
+| Phase 8 | Evidence / source view | Planned |
 
 ---
 
@@ -284,7 +251,7 @@ Yes. The design is intentionally lightweight and extensible.
 
 Issues and PRs are welcome.
 
-If you also believe the future of search is not **one more crawler**,
+If you also believe the future of search should not be **one more crawler stack**,
 but **one smarter way to use all existing AI search surfaces together**, feel free to contribute.
 
 ---
