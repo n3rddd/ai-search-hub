@@ -81,33 +81,9 @@ AI Search Hub does not rebuild that stack. It orchestrates it.
 
 ---
 
-## How it works
+## Supported Platforms
 
-### 1. Receive one query
-
-The user or agent asks one question only once. No repeated rewriting per provider.
-
-### 2. Dispatch across providers
-
-The same query is sent to multiple providers so each one can search the ecosystem it knows best.
-
-### 3. Reuse platform-native strengths
-
-Gemini is strong at Google and web search.
-Grok is strong at X / Twitter and real-time discovery.
-Doubao, Yuanbao, Qwen, and Wenxin are better aligned with different layers of the Chinese internet.
-
-### 4. Collect and normalize results
-
-Outputs from multiple providers are pulled back into a single channel, ready for normalization, fusion, and workflow consumption.
-
-### 5. Return to your workflow
-
-The final output is meant for agents, research pipelines, monitoring systems, and automation workflows, not just browser tabs.
-
----
-
-## Provider Matrix
+These platforms are not side notes. They are the search surfaces AI Search Hub orchestrates first.
 
 <table>
   <thead>
@@ -163,6 +139,32 @@ The final output is meant for agents, research pipelines, monitoring systems, an
     </tr>
   </tbody>
 </table>
+
+---
+
+## How it works
+
+### 1. Receive one query
+
+The user or agent asks one question only once. No repeated rewriting per provider.
+
+### 2. Dispatch across providers
+
+The same query is sent to multiple providers so each one can search the ecosystem it knows best.
+
+### 3. Reuse platform-native strengths
+
+Gemini is strong at Google and web search.
+Grok is strong at X / Twitter and real-time discovery.
+Doubao, Yuanbao, Qwen, and Wenxin are better aligned with different layers of the Chinese internet.
+
+### 4. Collect and normalize results
+
+Outputs from multiple providers are pulled back into a single channel, ready for normalization, fusion, and workflow consumption.
+
+### 5. Return to your workflow
+
+The final output is meant for agents, research pipelines, monitoring systems, and automation workflows, not just browser tabs.
 
 ---
 
