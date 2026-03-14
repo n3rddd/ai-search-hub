@@ -229,41 +229,9 @@ providers:
 
 ---
 
-## Roadmap
-
-| 阶段 | 内容 | 状态 |
-|---|---|---|
-| Phase 1 | Browser-based provider runners | Done |
-| Phase 2 | Login recovery flow | Done |
-| Phase 3 | Isolated browser-profile seeding | Done |
-| Phase 4 | Multi-provider search aggregation | In Progress |
-| Phase 5 | Unified result output | In Progress |
-| Phase 6 | More provider integrations | Planned |
-| Phase 7 | Result ranking / fusion | Planned |
-| Phase 8 | Evidence / source view | Planned |
-
----
-
 ## Contributing
 
 欢迎提交 Issues 和 PR。
 
 如果你也认同未来的搜索不应该是 **再写一个更重的爬虫系统**，
 而应该是 **更聪明地把现有 AI 搜索入口统一起来**，欢迎一起参与。
-
----
-
-## Disclaimer
-
-AI Search Hub 的目标是以务实、可持续的方式复用平台原生能力。
-请遵守你接入平台对应的服务条款、平台政策和适用法律。
-
-这个项目关注的是聚合与编排，不是绕过平台规则。
-
----
-
-## Final Line
-
-**一次提问，全域搜索。**
-不用从零重建搜索。
-直接接入平台已经打磨好的搜索能力。

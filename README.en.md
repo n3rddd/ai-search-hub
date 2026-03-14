@@ -230,41 +230,9 @@ Yes. The design is intentionally lightweight and extensible.
 
 ---
 
-## Roadmap
-
-| Stage | Item | Status |
-|---|---|---|
-| Phase 1 | Browser-based provider runners | Done |
-| Phase 2 | Login recovery flow | Done |
-| Phase 3 | Isolated browser-profile seeding | Done |
-| Phase 4 | Multi-provider search aggregation | In Progress |
-| Phase 5 | Unified result output | In Progress |
-| Phase 6 | More provider integrations | Planned |
-| Phase 7 | Result ranking / fusion | Planned |
-| Phase 8 | Evidence / source view | Planned |
-
----
-
 ## Contributing
 
 Issues and PRs are welcome.
 
 If you also believe the future of search should not be **one more crawler stack**,
 but **one smarter way to use all existing AI search surfaces together**, feel free to contribute.
-
----
-
-## Disclaimer
-
-AI Search Hub is designed to reuse platform-native capabilities in a practical and sustainable way.
-Please comply with the terms of service, policies, and applicable laws of the platforms you integrate with.
-
-This project focuses on aggregation and orchestration, not on bypassing platform rules.
-
----
-
-## Final Line
-
-**One Query. All Search.**
-Stop rebuilding search from scratch.
-Plug into the search power platforms already optimized.
