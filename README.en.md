@@ -50,7 +50,7 @@ Its job is simple:
 
 ## Traditional Workflow vs AI Search Hub
 
-<table>
+<table width="100%">
   <thead>
     <tr>
       <th align="left" width="42%">Traditional workflow</th>
@@ -87,13 +87,13 @@ Its job is simple:
 
 These platforms are not side notes. They are the search surfaces AI Search Hub orchestrates first.
 
-<table>
+<table width="100%">
   <thead>
     <tr>
-      <th align="left">Provider</th>
-      <th align="left">Search Strength</th>
-      <th align="left">Typical Coverage</th>
-      <th align="left">Role</th>
+      <th align="left" width="24%">Provider</th>
+      <th align="left" width="30%">Search Strength</th>
+      <th align="left" width="30%">Typical Coverage</th>
+      <th align="left" width="16%">Role</th>
     </tr>
   </thead>
   <tbody>
@@ -174,7 +174,7 @@ The final output is meant for agents, research pipelines, monitoring systems, an
 
 By reusing platform-native search capabilities, AI Search Hub can indirectly reach these core search worlds:
 
-<table>
+<table width="100%">
   <tr>
     <td width="33%">
       <strong>🌐 Global Web</strong><br>
