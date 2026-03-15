@@ -24,7 +24,7 @@
 </p>
 
 **An open-source skill for aggregating platform-native AI search.**
-**Bring tech updates, public sentiment, and daily planning into your OpenClaw with stronger search power.**
+**From tech trends, public sentiment, and breaking topics to trip planning, buying decisions, and everyday questions, bring stronger search power into your OpenClaw.**
 
 </div>
 
@@ -34,7 +34,7 @@
 
 AI Search Hub is an open-source skill that turns fragmented AI search surfaces into one reusable search hub.
 
-It lets you directly leverage search surfaces and search frameworks already refined by major AI platforms, then route tech updates, public sentiment, and daily planning into your own agents and workflows.
+It lets you directly leverage search surfaces and search frameworks already refined by major AI platforms, then route tech trends, public sentiment, breaking topics, trip planning, buying decisions, and everyday questions into your own agents and workflows.
 
 It is not trying to make you maintain:
 
