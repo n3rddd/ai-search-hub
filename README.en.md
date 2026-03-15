@@ -170,17 +170,54 @@ The final output is meant for agents, research pipelines, monitoring systems, an
 
 ## Search Worlds It Can Reach
 
-By reusing platform-native search capabilities, AI Search Hub can indirectly cover many major sources, such as:
+By reusing platform-native search capabilities, AI Search Hub can indirectly reach these core search worlds:
 
-- Google
-- Weibo
-- Douyin
-- X / Twitter
-- Reddit
-- WeChat Official Accounts
-- public web pages
-- overseas social media
-- Chinese internet ecosystems
+<table>
+  <tr>
+    <td width="33%">
+      <strong>🌐 Global Web</strong><br>
+      <sub>Google, public websites, knowledge pages</sub>
+    </td>
+    <td width="33%">
+      <strong>⚡ Real-Time Social</strong><br>
+      <sub>X / Twitter, Reddit, live discussions</sub>
+    </td>
+    <td width="33%">
+      <strong>🔥 Chinese Trends</strong><br>
+      <sub>Weibo, Douyin, Chinese hot topics</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%">
+      <strong>📰 WeChat Ecosystem</strong><br>
+      <sub>WeChat Official Accounts, source supplements</sub>
+    </td>
+    <td width="33%">
+      <strong>🧭 Overseas Signals</strong><br>
+      <sub>overseas social media, public trend signals</sub>
+    </td>
+    <td width="33%">
+      <strong>🏮 Chinese Internet</strong><br>
+      <sub>Chinese web pages, vertical sites, content ecosystems</sub>
+    </td>
+  </tr>
+</table>
+
+<details>
+  <summary>Original list backup</summary>
+
+  <ul>
+    <li>Google</li>
+    <li>Weibo</li>
+    <li>Douyin</li>
+    <li>X / Twitter</li>
+    <li>Reddit</li>
+    <li>WeChat Official Accounts</li>
+    <li>public web pages</li>
+    <li>overseas social media</li>
+    <li>Chinese internet ecosystems</li>
+  </ul>
+</details>
 
 The point is not to crawl every platform yourself.
 The point is:

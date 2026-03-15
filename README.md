@@ -169,17 +169,54 @@ Grok 擅长 X / Twitter 实时搜索。
 
 ## 覆盖的内容世界
 
-通过不同平台已经打磨好的搜索能力，AI Search Hub 可以间接覆盖多种主流来源，例如：
+通过不同平台已经打磨好的搜索能力，AI Search Hub 可以间接覆盖这些核心内容世界：
 
-- Google
-- 微博
-- 抖音
-- X / Twitter
-- Reddit
-- 微信公众号
-- 各类公开网页内容
-- 海外社交媒体
-- 中文互联网内容生态
+<table>
+  <tr>
+    <td width="33%">
+      <strong>🌐 全球网页</strong><br>
+      <sub>Google、公开网页、知识站点</sub>
+    </td>
+    <td width="33%">
+      <strong>⚡ 实时社交</strong><br>
+      <sub>X / Twitter、Reddit、热点讨论</sub>
+    </td>
+    <td width="33%">
+      <strong>🔥 中文热点</strong><br>
+      <sub>微博、抖音、中文热门内容</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%">
+      <strong>📰 微信生态</strong><br>
+      <sub>微信公众号、中文信源补充</sub>
+    </td>
+    <td width="33%">
+      <strong>🧭 海外内容</strong><br>
+      <sub>海外社交媒体、公开趋势信息</sub>
+    </td>
+    <td width="33%">
+      <strong>🏮 中文互联网</strong><br>
+      <sub>中文网页、垂直站点、内容生态</sub>
+    </td>
+  </tr>
+</table>
+
+<details>
+  <summary>原始列表备份</summary>
+
+  <ul>
+    <li>Google</li>
+    <li>微博</li>
+    <li>抖音</li>
+    <li>X / Twitter</li>
+    <li>Reddit</li>
+    <li>微信公众号</li>
+    <li>各类公开网页内容</li>
+    <li>海外社交媒体</li>
+    <li>中文互联网内容生态</li>
+  </ul>
+</details>
 
 重点不是你自己去一个个平台写爬虫，
 而是：
