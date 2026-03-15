@@ -231,81 +231,73 @@ The point is:
 ## Example Configuration
 
 ```yaml
-hub:
-  parallel: true
-  timeout_ms: 30000
-  normalize_output: true
+# agents/openai.yaml
+interface:
+  display_name: "AI Search Hub"
+  short_description: "Run AI Search Hub browser scripts across supported AI platforms"
+  default_prompt: "Use $ai-search-hub to run one of the repository chat sites with automatic Chrome debug startup and login waiting."
 
-providers:
-  gemini:
-    enabled: true
-    role: "google-web-search"
-
-  grok:
-    enabled: true
-    role: "x-twitter-search"
-
-  doubao:
-    enabled: true
-    role: "douyin-chinese-content"
-
-  yuanbao:
-    enabled: true
-    role: "wechat-official-accounts"
-
-  wenxin:
-    enabled: false
-    role: "chinese-web-search"
-
-  qwen:
-    enabled: false
-    role: "general-chinese-search"
+policy:
+  allow_implicit_invocation: true
 ```
 
-This does not mean the project must already use a YAML config file.
-It is a conceptual example that shows:
-
-- the hub layer handles orchestration
-- the provider layer controls which platforms are enabled
-- each provider carries a distinct search role
+This is not a conceptual interface. It is the actual agent configuration snippet currently used in the repository.
+The runtime entrypoint is still `scripts/run_web_chat.py`.
 
 ---
 
 ## Example Request
 
-```json
-{
-  "query": "What are users saying about AI coding products across different platforms recently?",
-  "providers": ["gemini", "grok", "doubao", "yuanbao"],
-  "mode": "parallel"
-}
+```bash
+python3 scripts/run_web_chat.py \
+  --site doubao \
+  --prompt "Help me plan a Xinjiang travel route" \
+  --output out/doubao_xinjiang_route.txt
+
+python3 scripts/run_web_chat.py \
+  --site grok \
+  --prompt "Summarize Elon Musk's posts on X from the last 14 days, list them by date in descending order, and include links" \
+  --output out/grok_musk_recent.txt
 ```
 
 ## Example Output
 
-```json
-{
-  "query": "What are users saying about AI coding products across different platforms recently?",
-  "results": [
-    {
-      "provider": "gemini",
-      "summary": "Google / web search result summary"
-    },
-    {
-      "provider": "grok",
-      "summary": "X / Twitter search result summary"
-    },
-    {
-      "provider": "doubao",
-      "summary": "Douyin / Chinese content summary"
-    },
-    {
-      "provider": "yuanbao",
-      "summary": "WeChat Official Accounts / Chinese web summary"
-    }
-  ]
-}
+Doubao output excerpt:
+
+```text
+1. Northern Xinjiang classic loop, 7-10 days
+Urumqi -> Heavenly Lake -> Keketuohai -> Burqin -> Five-Colored Beach -> Kanas -> Hemu -> Urho Ghost City -> Sayram Lake
+
+2. Ili grassland and flower route, 6-8 days
+Urumqi -> Sayram Lake -> Guozigou -> Huocheng lavender -> Tekes -> Kalajun -> Xiata -> Nalati -> Duku Highway
 ```
+
+Grok output excerpt:
+
+```text
+2026-03-15: Starlink now available in Kuwait
+2026-03-15: Couldn't script it better
+2026-03-15: SpaceX 24th anniversary related post
+
+Overall, the recent pattern on X is mostly three buckets: xAI/Grok and X platform promotion, Starlink/SpaceX, and frequent political commentary.
+```
+
+## Live Results
+
+<table width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <img src="docs/images/doubao-result.png" alt="Doubao run result" width="100%">
+      <br>
+      <sub>Real Doubao run result</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="docs/images/grok-result.png" alt="Grok run result" width="100%">
+      <br>
+      <sub>Real Grok run result</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 

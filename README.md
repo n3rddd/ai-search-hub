@@ -231,81 +231,73 @@ Grok 擅长 X / Twitter 实时搜索。
 ## 配置示例
 
 ```yaml
-hub:
-  parallel: true
-  timeout_ms: 30000
-  normalize_output: true
+# agents/openai.yaml
+interface:
+  display_name: "AI Search Hub"
+  short_description: "Run AI Search Hub browser scripts across supported AI platforms"
+  default_prompt: "Use $ai-search-hub to run one of the repository chat sites with automatic Chrome debug startup and login waiting."
 
-providers:
-  gemini:
-    enabled: true
-    role: "google-web-search"
-
-  grok:
-    enabled: true
-    role: "x-twitter-search"
-
-  doubao:
-    enabled: true
-    role: "douyin-chinese-content"
-
-  yuanbao:
-    enabled: true
-    role: "wechat-official-accounts"
-
-  wenxin:
-    enabled: false
-    role: "chinese-web-search"
-
-  qwen:
-    enabled: false
-    role: "general-chinese-search"
+policy:
+  allow_implicit_invocation: true
 ```
 
-这个配置不代表项目里现在一定已经有这样一个 YAML 文件。
-它只是一个概念示例，用来表达：
-
-- Hub 层负责统一调度
-- Provider 层负责接入不同平台
-- 不同平台承担不同搜索角色
+这不是概念化接口，而是仓库里当前实际使用的 Agent 配置片段。
+真正执行入口仍然是 `scripts/run_web_chat.py`。
 
 ---
 
 ## 请求示例
 
-```json
-{
-  "query": "最近 AI 编程产品在不同平台的用户反馈",
-  "providers": ["gemini", "grok", "doubao", "yuanbao"],
-  "mode": "parallel"
-}
+```bash
+python3 scripts/run_web_chat.py \
+  --site doubao \
+  --prompt "帮我规划一下新疆旅游路线" \
+  --output out/doubao_xinjiang_route.txt
+
+python3 scripts/run_web_chat.py \
+  --site grok \
+  --prompt "请帮我总结 Elon Musk 在 X (Twitter) 上最近14天的一些动态，按日期倒序列出并附上链接" \
+  --output out/grok_musk_recent.txt
 ```
 
 ## 返回示例
 
-```json
-{
-  "query": "最近 AI 编程产品在不同平台的用户反馈",
-  "results": [
-    {
-      "provider": "gemini",
-      "summary": "Google / 网页搜索结果摘要"
-    },
-    {
-      "provider": "grok",
-      "summary": "X / Twitter 搜索结果摘要"
-    },
-    {
-      "provider": "doubao",
-      "summary": "抖音 / 中文内容摘要"
-    },
-    {
-      "provider": "yuanbao",
-      "summary": "微信公众号 / 中文网页内容摘要"
-    }
-  ]
-}
+豆包输出片段：
+
+```text
+1. 北疆经典环线 7-10天
+乌鲁木齐 -> 天山天池 -> 可可托海 -> 布尔津 -> 五彩滩 -> 喀纳斯 -> 禾木 -> 乌尔禾魔鬼城 -> 赛里木湖
+
+2. 伊犁草原花海环线 6-8天
+乌鲁木齐 -> 赛里木湖 -> 果子沟 -> 霍城薰衣草 -> 特克斯 -> 喀拉峻 -> 夏塔 -> 那拉提 -> 独库公路
 ```
+
+Grok 输出片段：
+
+```text
+2026年3月15日：Starlink now available in Kuwait
+2026年3月15日：Couldn't script it better
+2026年3月15日：SpaceX 24周年相关帖子
+
+整体看，最近这段时间他在 X 上主要还是三类内容：xAI/Grok 和 X 平台推广、Starlink/SpaceX、高频政治表态。
+```
+
+## 运行效果
+
+<table width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <img src="docs/images/doubao-result.png" alt="Doubao run result" width="100%">
+      <br>
+      <sub>豆包真实运行结果</sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="docs/images/grok-result.png" alt="Grok run result" width="100%">
+      <br>
+      <sub>Grok 真实运行结果</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
