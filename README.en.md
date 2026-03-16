@@ -24,7 +24,7 @@
 </p>
 
 **An open-source skill for aggregating platform-native AI search.**
-**From tech trends, public sentiment, and breaking topics to trip planning, buying decisions, link extraction, and page summarization, bring stronger search, extraction, and data-leverage power into your OpenClaw.**
+**Pull WeChat Official Accounts, Douyin, Weibo, and more through major AI platforms, then let them collect, clean, and structure the data for your OpenClaw.**
 
 </div>
 
@@ -34,7 +34,7 @@
 
 AI Search Hub is an open-source skill that turns fragmented AI search surfaces, page-extraction abilities, and the native data worlds behind those platforms into one reusable orchestration hub.
 
-It is not just for one-query, all-search workflows. Give it a link and it can also borrow the page understanding, search, and extraction abilities already refined by major AI platforms. More importantly, it lets you borrow the platform-owned data ecosystems, native content entry points, and source advantages that are hardest to reproduce on your own, so they do the reading, extraction, and structuring for your agents and workflows.
+It is not just for one-query, all-search workflows. Give it a link and it can also borrow the page understanding, search, and extraction abilities already refined by major AI platforms. More importantly, it lets you reach data that those platforms are better positioned to surface, such as WeChat Official Accounts, Douyin, Weibo, and other native content ecosystems, then let them collect, clean, and structure the result for your agents and workflows.
 
 It is not trying to make you maintain:
 
@@ -46,7 +46,7 @@ It is not trying to make you maintain:
 
 Its job is simple:
 
-> **Turn multi-platform AI search, page-extraction ability, and the native data worlds behind major platforms into one entrypoint: give it a question and it searches; give it a link and it reads, so major platforms do the hardest part for you.**
+> **Turn multi-platform AI search, page-extraction ability, and the native data worlds behind major platforms into one entrypoint, so major AI platforms collect WeChat, Douyin, Weibo, and other hard-to-reach data for you, then clean and structure it.**
 
 <table width="100%">
   <tr>
