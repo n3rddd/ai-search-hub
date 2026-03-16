@@ -24,7 +24,7 @@
 </p>
 
 **An open-source skill for aggregating platform-native AI search.**
-**From tech trends, public sentiment, and breaking topics to trip planning, buying decisions, and everyday questions, bring stronger search power into your OpenClaw.**
+**From tech trends, public sentiment, and breaking topics to trip planning, buying decisions, link extraction, and page summarization, bring stronger search, extraction, and data-leverage power into your OpenClaw.**
 
 </div>
 
@@ -32,9 +32,9 @@
 
 ## Plug Big-Tech Native Search into Your OpenClaw
 
-AI Search Hub is an open-source skill that turns fragmented AI search surfaces into one reusable search hub.
+AI Search Hub is an open-source skill that turns fragmented AI search surfaces, page-extraction abilities, and the native data worlds behind those platforms into one reusable orchestration hub.
 
-It lets you directly leverage search surfaces and search frameworks already refined by major AI platforms, then route tech trends, public sentiment, breaking topics, trip planning, buying decisions, and everyday questions into your own agents and workflows.
+It is not just for one-query, all-search workflows. Give it a link and it can also borrow the page understanding, search, and extraction abilities already refined by major AI platforms. More importantly, it lets you borrow the platform-owned data ecosystems, native content entry points, and source advantages that are hardest to reproduce on your own, so they do the reading, extraction, and structuring for your agents and workflows.
 
 It is not trying to make you maintain:
 
@@ -46,7 +46,7 @@ It is not trying to make you maintain:
 
 Its job is simple:
 
-> **Turn multiple AI search surfaces into one entrypoint, and directly leverage search systems already refined by major platforms.**
+> **Turn multi-platform AI search, page-extraction ability, and the native data worlds behind major platforms into one entrypoint: give it a question and it searches; give it a link and it reads, so major platforms do the hardest part for you.**
 
 <table width="100%">
   <tr>
