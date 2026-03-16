@@ -363,3 +363,9 @@ Issues and PRs are welcome.
 
 If you also believe the future of search should not be **one more crawler stack**,
 but **one smarter way to use all existing AI search surfaces together**, feel free to contribute.
+
+---
+
+If this project is useful to you, consider giving it a [Star](https://github.com/minsight-ai-info/AI-Search-Hub).
+
+If you have ideas, feedback, or want to see more platforms integrated, open an [Issue](https://github.com/minsight-ai-info/AI-Search-Hub/issues) or send a [PR](https://github.com/minsight-ai-info/AI-Search-Hub/pulls).

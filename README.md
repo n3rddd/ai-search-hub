@@ -363,3 +363,9 @@ Grok 输出片段：
 
 如果你也认同未来的搜索不应该是 **再写一个更重的爬虫系统**，
 而应该是 **更聪明地把现有 AI 搜索入口统一起来**，欢迎一起参与。
+
+---
+
+如果这个项目对你有帮助，欢迎点一个 [Star](https://github.com/minsight-ai-info/AI-Search-Hub)。
+
+有想法、反馈或想接入新的平台，欢迎提 [Issue](https://github.com/minsight-ai-info/AI-Search-Hub/issues) 或直接发 [PR](https://github.com/minsight-ai-info/AI-Search-Hub/pulls)。
