@@ -161,7 +161,7 @@ AI Search Hub 不是传统 SDK，而是一个 Skill。
     <tr>
       <td><strong>More</strong><br><sub>Extensible surface</sub></td>
       <td><code>持续扩展</code> <code>更多入口</code> <code>更多平台</code></td>
-      <td><code>社交媒体</code> <code>搜索平台</code> <code>垂直内容源</code></td>
+      <td><code>Kimi</code> <code>Perplexity</code> <code>Claude</code> <code>文心一言</code> <code>更多垂直搜索源</code></td>
       <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
     </tr>
   </tbody>

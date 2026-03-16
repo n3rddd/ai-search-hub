@@ -161,7 +161,7 @@ These platforms are not side notes. They are the search surfaces AI Search Hub o
     <tr>
       <td><strong>More</strong><br><sub>Extensible surface</sub></td>
       <td><code>continuous expansion</code> <code>new surfaces</code> <code>new providers</code></td>
-      <td><code>social media</code> <code>search platforms</code> <code>vertical sources</code></td>
+      <td><code>Kimi</code> <code>Perplexity</code> <code>Claude</code> <code>Wenxin</code> <code>more vertical search sources</code></td>
       <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
     </tr>
   </tbody>
