@@ -117,7 +117,7 @@ These platforms are not side notes. They are the search surfaces AI Search Hub o
 <table width="100%">
   <thead>
     <tr>
-      <th align="left" width="24%">Provider</th>
+      <th align="left" width="24%">Platform</th>
       <th align="left" width="30%">Search Strength</th>
       <th align="left" width="30%">Typical Coverage</th>
       <th align="left" width="16%">Status</th>
@@ -161,9 +161,33 @@ These platforms are not side notes. They are the search surfaces AI Search Hub o
       <td><img src="https://img.shields.io/badge/Good-16a34a?style=flat-square" alt="Good"></td>
     </tr>
     <tr>
-      <td><strong>More</strong><br><sub>Extensible surface</sub></td>
+      <td><strong>Kimi</strong><br><sub>Long-context exploration</sub></td>
+      <td><code>long context</code> <code>document reading</code> <code>information structuring</code></td>
+      <td><code>long-form content</code> <code>research material</code> <code>public web</code></td>
+      <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
+    </tr>
+    <tr>
+      <td><strong>Perplexity</strong><br><sub>Web-native answer engine</sub></td>
+      <td><code>web search</code> <code>source citation</code> <code>fast summaries</code></td>
+      <td><code>public web</code> <code>news sites</code> <code>knowledge content</code></td>
+      <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
+    </tr>
+    <tr>
+      <td><strong>Claude</strong><br><sub>Reasoning and synthesis</sub></td>
+      <td><code>complex reasoning</code> <code>information synthesis</code> <code>long-form summarization</code></td>
+      <td><code>research material</code> <code>multi-source synthesis</code> <code>knowledge Q&amp;A</code></td>
+      <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
+    </tr>
+    <tr>
+      <td><strong>Wenxin</strong><br><sub>Baidu ecosystem expansion</sub></td>
+      <td><code>Chinese search</code> <code>Baidu ecosystem</code> <code>public web</code></td>
+      <td><code>Chinese pages</code> <code>search results</code> <code>public sites</code></td>
+      <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
+    </tr>
+    <tr>
+      <td><strong>More Vertical Sources</strong><br><sub>Extensible surface</sub></td>
       <td><code>continuous expansion</code> <code>new surfaces</code> <code>new providers</code></td>
-      <td><code>Kimi</code> <code>Perplexity</code> <code>Claude</code> <code>Wenxin</code> <code>more vertical search sources</code></td>
+      <td><code>vertical communities</code> <code>industry sites</code> <code>niche content sources</code></td>
       <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
     </tr>
   </tbody>

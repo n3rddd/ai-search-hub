@@ -117,7 +117,7 @@ AI Search Hub 不是传统 SDK，而是一个 Skill。
 <table width="100%">
   <thead>
     <tr>
-      <th align="left" width="24%">Provider</th>
+      <th align="left" width="24%">平台</th>
       <th align="left" width="30%">擅长方向</th>
       <th align="left" width="30%">典型覆盖</th>
       <th align="left" width="16%">当前状态</th>
@@ -161,9 +161,33 @@ AI Search Hub 不是传统 SDK，而是一个 Skill。
       <td><img src="https://img.shields.io/badge/Good-16a34a?style=flat-square" alt="Good"></td>
     </tr>
     <tr>
-      <td><strong>More</strong><br><sub>Extensible surface</sub></td>
+      <td><strong>Kimi</strong><br><sub>Long-context exploration</sub></td>
+      <td><code>长上下文</code> <code>文档阅读</code> <code>信息整理</code></td>
+      <td><code>长文内容</code> <code>研究资料</code> <code>公开网页</code></td>
+      <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
+    </tr>
+    <tr>
+      <td><strong>Perplexity</strong><br><sub>Web-native answer engine</sub></td>
+      <td><code>网页搜索</code> <code>来源引用</code> <code>快速摘要</code></td>
+      <td><code>公开网页</code> <code>新闻站点</code> <code>知识内容</code></td>
+      <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
+    </tr>
+    <tr>
+      <td><strong>Claude</strong><br><sub>Reasoning and synthesis</sub></td>
+      <td><code>复杂推理</code> <code>信息整合</code> <code>长文本总结</code></td>
+      <td><code>研究材料</code> <code>多来源整理</code> <code>知识问答</code></td>
+      <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
+    </tr>
+    <tr>
+      <td><strong>文心一言</strong><br><sub>Baidu ecosystem expansion</sub></td>
+      <td><code>中文搜索</code> <code>百度生态</code> <code>公开网页</code></td>
+      <td><code>中文网页</code> <code>搜索结果</code> <code>公开站点</code></td>
+      <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
+    </tr>
+    <tr>
+      <td><strong>更多垂直搜索源</strong><br><sub>Extensible surface</sub></td>
       <td><code>持续扩展</code> <code>更多入口</code> <code>更多平台</code></td>
-      <td><code>Kimi</code> <code>Perplexity</code> <code>Claude</code> <code>文心一言</code> <code>更多垂直搜索源</code></td>
+      <td><code>垂直社区</code> <code>行业站点</code> <code>细分内容源</code></td>
       <td><img src="https://img.shields.io/badge/Future-6b7280?style=flat-square" alt="Future"></td>
     </tr>
   </tbody>
