@@ -41,6 +41,7 @@ Identify which content ecosystem is most likely to have the answer:
 | Mentions 抖音, TikTok (Chinese), 字节跳动, ByteDance, 今日头条, 火山引擎, or the question is about Chinese trending topics, short video trends, Chinese pop culture, Chinese consumer trends | ByteDance / Douyin ecosystem | 字节跳动 ByteDance | `doubao` |
 | Mentions 美团, 大众点评, 外卖, 本地生活, 餐饮, 酒店, 旅游攻略, or the question is about local services, lifestyle, food, travel, merchant reviews | Meituan / Dianping ecosystem | 美团 Meituan | `longcat` |
 | Mentions 淘宝, 天猫, 阿里巴巴, 1688, 钉钉, or the question is about e-commerce, B2B, enterprise services, cloud computing | Alibaba ecosystem | 阿里巴巴 Alibaba | `qwen` |
+| Explicitly asks for MiniMax / MiniMax Agent / 海螺 / MiniMax 平台 | MiniMax ecosystem | MiniMax | `minimaxi` |
 | Mentions 微博, Weibo hot search, Chinese celebrity news, Chinese public opinion | Weibo / Sina ecosystem | 新浪 Sina | `doubao` or `longcat` |
 | **Domestic — By Content Type** |
 | Chinese lifestyle, local services, food recommendations, travel guides, merchant information | Meituan knowledge base | 美团 Meituan | `longcat` |
@@ -172,6 +173,7 @@ If the user provides a URL and asks the AI platform to read, extract, or summari
 | `baidu.com/*` | `qwen` or `longcat` | 百度 |
 | `bilibili.com/*` | `doubao` or `qwen` | B站 |
 | `xiaohongshu.com/*` | `doubao` | 小红书 |
+| `agent.minimaxi.com/*` | `minimaxi` | MiniMax |
 | Unknown or mixed | `gemini` (broadest web) | — |
 
 ---
@@ -214,6 +216,7 @@ If the user's question is time-sensitive or they are waiting, prefer running few
 | 抖音 / 头条 / 字节系内容 | `doubao` | `qwen` | 字节跳动 |
 | 美团 / 大众点评 / 本地生活 | `longcat` | `doubao` | 美团 |
 | 淘宝 / 天猫 / 阿里系内容 | `qwen` | `longcat` | 阿里巴巴 |
+| 明确要求 MiniMax 平台 | `minimaxi` | `qwen` | MiniMax |
 | 微博 / 新浪系内容 | `doubao` | `longcat` | 新浪 |
 | **Domestic — By Content Type** |
 | 本地生活服务 / 餐饮 / 酒店 / 旅游 | `longcat` | `doubao` | 美团 |

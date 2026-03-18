@@ -51,15 +51,20 @@ Its job is simple:
 
 <table width="100%">
   <tr>
-    <td width="50%" align="center">
+    <td width="33.33%" align="center">
       <img src="docs/images/grok-result.png" alt="Grok run result" width="100%">
       <br>
       <sub>Real Grok run result</sub>
     </td>
-    <td width="50%" align="center">
+    <td width="33.33%" align="center">
       <img src="docs/images/doubao-result.png" alt="Doubao run result" width="100%">
       <br>
       <sub>Real Doubao run result</sub>
+    </td>
+    <td width="33.33%" align="center">
+      <img src="docs/images/minimax.png" alt="MiniMax run result" width="100%">
+      <br>
+      <sub>Real MiniMax run result</sub>
     </td>
   </tr>
 </table>
@@ -113,7 +118,7 @@ Give this repository to any skill-capable agent or tool such as `OpenClaw`, `Cla
 
 These platforms are not side notes. They are the search surfaces AI Search Hub orchestrates first.
 
-**Currently integrated: `Gemini` / `Grok` / `Doubao` / `Yuanbao` / `LongCat` / `Qwen`**
+**Currently integrated: `Gemini` / `Grok` / `Doubao` / `Yuanbao` / `LongCat` / `Qwen` / `MiniMax`**
 
 <table width="100%">
   <thead>
@@ -159,6 +164,12 @@ These platforms are not side notes. They are the search surfaces AI Search Hub o
       <td><strong>Qwen / Tongyi</strong><br><sub>Chinese web expansion</sub></td>
       <td><code>Chinese search</code> <code>web Q&amp;A</code> <code>public content</code></td>
       <td><code>Chinese web</code> <code>search surfaces</code> <code>open information</code></td>
+      <td><img src="https://img.shields.io/badge/Good-16a34a?style=flat-square" alt="Good"></td>
+    </tr>
+    <tr>
+      <td><strong>MiniMax Agent</strong><br><sub>General Chinese assistant</sub></td>
+      <td><code>Chinese chat</code> <code>general web tasks</code> <code>consumer queries</code></td>
+      <td><code>general Chinese prompts</code> <code>lifestyle questions</code> <code>broad assistance</code></td>
       <td><img src="https://img.shields.io/badge/Good-16a34a?style=flat-square" alt="Good"></td>
     </tr>
     <tr>
@@ -334,6 +345,24 @@ Grok output excerpt:
 2026-03-15: SpaceX 24th anniversary related post
 
 Overall, the recent pattern on X is mostly three buckets: xAI/Grok and X platform promotion, Starlink/SpaceX, and frequent political commentary.
+```
+
+MiniMax output excerpt:
+
+```text
+Based on Bilibili's trending board, here is a recent hot-video summary:
+
+Games:
+2. Prism 2033 gameplay reveal and first PV
+6. I regretted bringing my friend to the dam
+
+Lifestyle / outdoors:
+1. Brother Niu, am I going to die too...
+3. Rescuing a fox on a snowy mountain, but with one million farmers
+
+Trend summary:
+Hottest theme: the snowy-mountain fox rescue series
+Popular categories: game animation, social observation, science explainers, emotional music
 ```
 
 ---

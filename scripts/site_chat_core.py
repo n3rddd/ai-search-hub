@@ -92,14 +92,38 @@ COMMON_NOISE_SUBSTRINGS = [
 
 SITE_LINE_EXCLUSIONS = {
     "qwen": {
-        "已经完成思考",
-        "快速",
-        "正在读取来源…",
-        "正在读取来源...",
-        "正在搜索网络",
-        "跳过",
-        "人工智能生成的内容可能不准确。",
+        "??????",
+        "??",
+        "???????",
+        "??????...",
+        "??????",
+        "??",
+        "???????????????",
     },
+    "minimaxi": {
+        "已思考",
+        "已完成 Web搜索",
+        "查看此任务中的所有文件",
+        "当前你拥有AI视窗的控制权",
+        "结束",
+        "全能",
+        "当前进程",
+        "文件",
+    },
+}
+
+SITE_LINE_PREFIX_EXCLUSIONS = {
+    "minimaxi": (
+        "好的，我已收到您的请求",
+        "我来为你搜索",
+    ),
+}
+
+SITE_TEXT_TRUNCATION_MARKERS = {
+    "minimaxi": (
+        "查看此任务中的所有文件",
+        "当前你拥有AI视窗的控制权",
+    ),
 }
 
 STARTUP_PAGE_PREFIXES = (
@@ -123,11 +147,11 @@ SITE_CONFIG = {
         "assistant_selectors": COMMON_ASSISTANT_SELECTORS,
         "generation_running_selectors": COMMON_GENERATION_RUNNING_SELECTORS,
         "generation_done_selectors": COMMON_GENERATION_DONE_SELECTORS,
-        "login_selectors": ['text="登录"', 'text="Sign in"', 'text="Continue with Google"', 'text="注册"'],
+        "login_selectors": ['text="Sign in"', 'text="Continue with Google"'],
         "login_phrases": COMMON_LOGIN_PHRASES,
         "blocked_phrases": COMMON_BLOCKED_PHRASES,
         "attempt_send_before_login": True,
-        "noise_substrings": COMMON_NOISE_SUBSTRINGS + ["内容由通义生成"],
+        "noise_substrings": COMMON_NOISE_SUBSTRINGS + ["\u5185\u5bb9\u7531\u901a\u4e49\u751f\u6210"],
     },
     "gemini": {
         "url": "https://gemini.google.com/app",
@@ -162,6 +186,20 @@ SITE_CONFIG = {
         "blocked_phrases": COMMON_BLOCKED_PHRASES,
         "error_phrases": COMMON_ERROR_PHRASES,
         "noise_substrings": COMMON_NOISE_SUBSTRINGS,
+    },
+    "minimaxi": {
+        "url": "https://agent.minimaxi.com/",
+        "input_selectors": COMMON_INPUT_SELECTORS + ['div[data-slate-editor="true"]'],
+        "send_selectors": COMMON_SEND_SELECTORS + ['button[aria-label*="Send"]', 'button[type="submit"]'],
+        "assistant_selectors": ['[class*=\"stream-message-content\"]', '[class*=\"stream-message-text\"]', '[class*=\"received\"]', '[class*=\"markdown\"]', '[class*=\"prose\"]', 'article'],
+        "generation_running_selectors": COMMON_GENERATION_RUNNING_SELECTORS,
+        "generation_done_selectors": COMMON_GENERATION_DONE_SELECTORS + ['button:has-text("Retry")'],
+        "login_selectors": ['text="Sign in"', 'text="Log in"', 'text="Continue with Google"'],
+        "login_phrases": COMMON_LOGIN_PHRASES,
+        "blocked_phrases": COMMON_BLOCKED_PHRASES,
+        "error_phrases": COMMON_ERROR_PHRASES,
+        "attempt_send_before_login": True,
+        "noise_substrings": COMMON_NOISE_SUBSTRINGS + ["\u5185\u5bb9\u7531 MiniMax \u751f\u6210", "\u5185\u5bb9\u7531AI\u751f\u6210\uff0c\u91cd\u8981\u4fe1\u606f\u8bf7\u52a1\u5fc5\u6838\u67e5"],
     },
 }
 
@@ -360,6 +398,12 @@ def clean_answer_text(site_name: str, text: str, question: str) -> str:
     if not normalized:
         return ""
 
+    for marker in SITE_TEXT_TRUNCATION_MARKERS.get(site_name, ()): 
+        marker_index = normalized.find(marker)
+        if marker_index != -1:
+            normalized = normalized[:marker_index].rstrip()
+            break
+
     lines = [line.strip() for line in normalized.splitlines() if line.strip()]
     normalized_question = normalize_text(question, config["noise_substrings"])
     if normalized_question and normalized_question in lines:
@@ -367,8 +411,23 @@ def clean_answer_text(site_name: str, text: str, question: str) -> str:
         lines = lines[last_prompt_index + 1 :]
 
     exclusions = SITE_LINE_EXCLUSIONS.get(site_name, set())
-    lines = [line for line in lines if line not in exclusions]
-    return "\n".join(lines).strip()
+    prefix_exclusions = SITE_LINE_PREFIX_EXCLUSIONS.get(site_name, ())
+    filtered_lines: list[str] = []
+    for line in lines:
+        if line in exclusions:
+            continue
+        if any(line.startswith(prefix) for prefix in prefix_exclusions):
+            continue
+        if site_name == "minimaxi" and line.endswith("s") and line[:-1].replace(".", "", 1).isdigit():
+            continue
+        filtered_lines.append(line)
+
+    if site_name == "minimaxi":
+        filtered_lines = [line for line in filtered_lines if line != "Thinking Process"]
+        while filtered_lines and not any("一" <= ch <= "鿿" for ch in filtered_lines[0]):
+            filtered_lines.pop(0)
+
+    return "\n".join(filtered_lines).strip()
 
 
 def select_all_shortcut() -> str:

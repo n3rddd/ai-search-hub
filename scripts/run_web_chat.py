@@ -63,6 +63,12 @@ SITE_CONFIG = {
         "url": "https://grok.com/",
         "default_output": "out/grok_answer.txt",
     },
+    "minimaxi": {
+        "mode": "generic",
+        "script": "scripts/minimaxi_playwright.py",
+        "url": "https://agent.minimaxi.com/",
+        "default_output": "out/minimaxi_answer.txt",
+    },
 }
 
 IGNORE_DIRS = {
@@ -117,7 +123,7 @@ class BrowserInstallation:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Standardized runner for Yuanbao, LongCat, Doubao, Qwen, Gemini, and Grok chat automation."
+        description="Standardized runner for Yuanbao, LongCat, Doubao, Qwen, Gemini, Grok, and MiniMax chat automation."
     )
     parser.add_argument("--site", choices=sorted(SITE_CONFIG), required=True, help="Target chat site.")
     parser.add_argument("--prompt", required=True, help="Prompt to send to the site.")
