@@ -395,6 +395,18 @@ but **one smarter way to use all existing AI search surfaces together**, feel fr
 
 ---
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=minsight-ai-info%2FAI-Search-Hub&type=date&legend=top-left">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=minsight-ai-info/AI-Search-Hub&type=Date&legend=top-left&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=minsight-ai-info/AI-Search-Hub&type=Date&legend=top-left" />
+    <img alt="Star History Chart" src="https://api.star-history.com/image?repos=minsight-ai-info/AI-Search-Hub&type=Date&legend=top-left" />
+  </picture>
+</a>
+
+---
+
 If this project is useful to you, consider giving it a [Star](https://github.com/minsight-ai-info/AI-Search-Hub).
 
 If you have ideas, feedback, or want to see more platforms integrated, open an [Issue](https://github.com/minsight-ai-info/AI-Search-Hub/issues) or send a [PR](https://github.com/minsight-ai-info/AI-Search-Hub/pulls).
